@@ -1,4 +1,5 @@
 User-agent: *
-Disallow:
+Allow: /
 
 Sitemap: https://regulatoryintelligence.ai/sitemap.xml
+Sitemap: https://www.regulatoryintelligence.ai/sitemap.xml
