@@ -3,18 +3,36 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Quiz MDR - Regulatory Intelligence Hub</title>
+  <title>Quiz MDR - RIH</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="favicon.ico">
   <style>
-    body { font-family: Arial, sans-serif; text-align: center; margin: 3rem; }
+    body { font-family: Arial, sans-serif; padding: 2rem; line-height: 1.6; max-width: 800px; margin: auto; }
     h1 { color: #0050b3; }
-    a { color: #0050b3; font-weight: bold; text-decoration: none; }
+    form { margin-top: 2rem; }
+    label { display: block; margin-top: 1rem; }
+    button { margin-top: 2rem; padding: 0.5rem 1rem; background-color: #0050b3; color: white; border: none; }
   </style>
 </head>
 <body>
   <h1>Quiz MDR – Quanto sei conforme?</h1>
-  <p>Stiamo preparando un quiz interattivo per aiutarti a valutare il tuo livello di preparazione alla compliance MDR.</p>
-  <p>Nel frattempo, puoi <a href="whitepaper.pdf" download>scaricare il nostro Whitepaper</a> oppure <a href="index.html">tornare alla Home</a>.</p>
+  <form>
+    <label>1. Hai già classificato i tuoi dispositivi secondo l’Annex VIII MDR?
+      <select><option>Sì</option><option>No</option><option>Non so</option></select>
+    </label>
+    <label>2. Hai nominato un PRRC?
+      <select><option>Sì</option><option>No</option><option>In valutazione</option></select>
+    </label>
+    <label>3. Il fascicolo tecnico è aggiornato?
+      <select><option>Completo</option><option>Parziale</option><option>Non ancora</option></select>
+    </label>
+    <label>4. Hai registrato l’attore su EUDAMED (SRN)?
+      <select><option>Sì</option><option>No</option><option>Non so</option></select>
+    </label>
+    <label>5. Vuoi ricevere una checklist gratuita?
+      <select><option>Sì</option><option>No</option></select>
+    </label>
+    <button type="submit" onclick="alert('Grazie! Riceverai un report via email.'); return false;">Invia</button>
+  </form>
+  <p><a href="index.html">← Torna alla Home</a></p>
 </body>
 </html>
