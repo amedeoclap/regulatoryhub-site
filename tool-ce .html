@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tool CE Marking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f9fc;
+      margin: 0;
+    }
+    .container {
+      max-width: 800px;
+      background: white;
+      margin: 2rem auto;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    h1 { color: #0050b3; }
+    label { display: block; margin-top: 1rem; font-weight: bold; }
+    select, input {
+      width: 100%;
+      padding: 0.7rem;
+      margin-top: 0.3rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .output {
+      margin-top: 2rem;
+      padding: 1rem;
+      background: #e0f2ff;
+      border-left: 4px solid #007bff;
+    }
+  </style>
+</head>
+<body>
+  
+<header style="background: #f0f4fa; padding: 1rem; border-bottom: 1px solid #ccc;">
+  <div style="max-width: 1100px; margin: auto; display: flex; align-items: center; justify-content: space-between;">
+    <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
+      <img src="logo.svg" alt="Logo" style="height: 40px; margin-right: 10px;">
+      <span style="font-size: 1.2rem; font-weight: bold; color: #0050b3;">Regulatory Intelligence Hub</span>
+    </a>
+  </div>
+</header>
+
+  <div class="container">
+    <h1>Verifica Preliminare CE Marking</h1>
+    <p>Compila queste domande per verificare se sei pronto per ottenere il marchio CE.</p>
+    <label for="rischio">Livello di rischio previsto</label>
+    <select id="rischio">
+      <option value="basso">Basso</option>
+      <option value="alto">Alto</option>
+    </select>
+    <label><input type="checkbox" id="doc"> Documentazione tecnica già predisposta (fascicolo, risk analysis, valutazione clinica)</label>
+    <button onclick="verificaCE()">Verifica</button>
+    <div id="output" class="output"></div>
+  </div>
+  
+<footer style="text-align: center; padding: 2rem 1rem; font-size: 0.9rem; color: #555;">
+  <p><a href="index.html" style="color: #0050b3;">← Torna alla Home</a></p>
+</footer>
+
+  <script>
+    function verificaCE() {
+      const risk = document.getElementById("rischio").value;
+      const doc = document.getElementById("doc").checked;
+      let result = "";
+      if (risk === "alto" && doc) {
+        result = "✅ Dispositivo ad alto rischio con documentazione pronta: procedura CE avanzata (classe IIb o III).";
+      } else if (risk === "basso" && doc) {
+        result = "✅ Potresti procedere con autocertificazione o classe I/IIa.";
+      } else {
+        result = "⚠️ Mancano elementi fondamentali. Verifica la documentazione tecnica e riprova.";
+      }
+      document.getElementById("output").innerText = result;
+    }
+  </script>
+</body>
+</html>
