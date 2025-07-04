@@ -11,11 +11,19 @@
     form { margin-top: 2rem; }
     label { display: block; margin-top: 1rem; }
     button { margin-top: 2rem; padding: 0.5rem 1rem; background-color: #0050b3; color: white; border: none; }
+    #email-cta { display: none; margin-top: 3rem; padding: 1rem; border: 1px solid #ddd; background-color: #f7f9fc; }
   </style>
+  <script>
+    function mostraEmailForm(event) {
+      event.preventDefault();
+      document.getElementById('quiz-form').style.display = 'none';
+      document.getElementById('email-cta').style.display = 'block';
+    }
+  </script>
 </head>
 <body>
   <h1>Quiz MDR – Quanto sei conforme?</h1>
-  <form>
+  <form id="quiz-form" onsubmit="mostraEmailForm(event)">
     <label>1. Hai già classificato i tuoi dispositivi secondo l’Annex VIII MDR?
       <select><option>Sì</option><option>No</option><option>Non so</option></select>
     </label>
@@ -31,8 +39,25 @@
     <label>5. Vuoi ricevere una checklist gratuita?
       <select><option>Sì</option><option>No</option></select>
     </label>
-    <button type="submit" onclick="alert('Grazie! Riceverai un report via email.'); return false;">Invia</button>
+    <button type="submit">Invia</button>
   </form>
-  <p><a href="index.html">← Torna alla Home</a></p>
+
+  <div id="email-cta">
+    <h2>🎉 Hai completato il quiz!</h2>
+    <p>Inserisci la tua email per ricevere:</p>
+    <ul>
+      <li>📘 Il whitepaper “MDR 2027: 10 errori da evitare”</li>
+      <li>✅ Una checklist personalizzata</li>
+      <li>🧪 Accesso anticipato agli strumenti RIH</li>
+    </ul>
+    <form action="https://23bc19b1.sibforms.com/serve/MUIFAHFAalxP7m4SFUXFKKYs58Ls3e9PuRv0roDGlpkVbZ0FfmKsqqfrC2s8Ve_lQ8ky4d63rOkxcMJoOILGzSj_6JoM22DtPelLj7ncTFqn1unpo6iEb1T9zMCHeHQrR7UxEf6aXqNVILwnhYeHzlOAg19yRakrMN9y4KRFdjtdPUz2CgfbsYJAhUH0VMeTTocdAz8CCnVvDpdu" method="POST" target="_blank">
+      <label>Email:
+        <input type="email" name="email" required>
+      </label>
+      <button type="submit">Ricevi tutto via email</button>
+    </form>
+  </div>
+
+  <p style="margin-top: 3rem;"><a href="index.html">← Torna alla Home</a></p>
 </body>
 </html>
