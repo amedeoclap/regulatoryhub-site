@@ -1,1 +1,191 @@
-[CODICE HTML COMPLETO QUI INSERITO]
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regulatory Intelligence Hub - Compliance MedTech Semplificata</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    :root {
+      --primary-color: #0050b3;
+      --secondary-color: #007bff;
+      --background-light: #f7f9fc;
+      --text-color: #333;
+      --text-light: #555;
+      --white-color: #ffffff;
+      --border-color: #e0e0e0;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      line-height: 1.7;
+      color: var(--text-color);
+      background-color: var(--white-color);
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 1.5rem;
+    }
+    h1, h2, h3 { color: var(--primary-color); }
+    .main-header {
+      background-color: var(--white-color);
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .main-header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+    .logo img {
+      height: 40px;
+      margin-right: 0.75rem;
+    }
+    .main-nav a {
+      margin: 0 1rem;
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .hero {
+      background-color: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+    .hero p { max-width: 700px; margin: 1rem auto; }
+    .btn {
+      display: inline-block;
+      background: var(--secondary-color);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+    section {
+      padding: 3rem 0;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      border: 1px solid var(--border-color);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+    .cta-block {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      margin: 2rem auto;
+      text-align: center;
+      max-width: 700px;
+    }
+    footer {
+      background: #333;
+      color: #ccc;
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: white;
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header class="main-header">
+  <div class="container">
+    <a href="index.html" class="logo"><img src="logo.svg" alt="Logo">Regulatory Intelligence Hub</a>
+    <nav class="main-nav">
+      <a href="#chi-siamo">Chi Siamo</a>
+      <a href="#servizi">Servizi</a>
+      <a href="contact.html">Contatti</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Semplifichiamo la compliance MedTech con l’AI</h1>
+    <p>Soluzioni digitali per la conformità a MDR, IVDR e ISO 13485. Riduci i tempi, minimizza i rischi.</p>
+    <a href="#servizi" class="btn">Scopri i servizi</a>
+  </div>
+</section>
+
+<section id="chi-siamo">
+  <div class="container">
+    <h2>Chi Siamo</h2>
+    <p>Siamo una startup innovativa che unisce regulatory affairs, ingegneria e intelligenza artificiale per supportare produttori, distributori e importatori nel settore MedTech.</p>
+  </div>
+</section>
+
+<section id="servizi">
+  <div class="container">
+    <h2>Strumenti Regolatori</h2>
+    <div class="services-grid">
+      <div class="card">
+        <h3>🔍 Classificazione MDR</h3>
+        <p>Scopri la classe del tuo dispositivo in base al Regolamento 2017/745.</p>
+        <a href="classificazione.html" class="btn">Avvia Tool</a>
+      </div>
+      <div class="card">
+        <h3>📦 Generatore UDI</h3>
+        <p>Genera un codice UDI strutturato e simulane la composizione.</p>
+        <a href="tool-udi.html" class="btn">Prova UDI</a>
+      </div>
+      <div class="card">
+        <h3>🧪 Quiz MDR</h3>
+        <p>Valuta la prontezza normativa del tuo dispositivo con 6 domande guidate.</p>
+        <a href="quiz.html" class="btn">Inizia il Quiz</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cta-block">
+      <h3>📘 Scarica il Whitepaper 2025</h3>
+      <p>Le 10 barriere alla certificazione MDR e come superarle. Pensato per PMI e startup MedTech.</p>
+      <a href="whitepaper_rih.pdf" class="btn" download>Scarica PDF</a>
+    </div>
+    <div class="cta-block">
+      <h3>📞 Hai bisogno di supporto?</h3>
+      <p>Contattaci per una consulenza gratuita. Analizzeremo insieme il tuo percorso di conformità.</p>
+      <a href="contact.html" class="btn">Contattaci</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="cookie.html">Cookie Policy</a> |
+    <a href="whitepaper_rih.pdf">Whitepaper</a>
+  </p>
+  <p>&copy; 2025 Regulatory Intelligence Hub – P. IVA: [in registrazione]</p>
+</footer>
+
+</body>
+</html>
