@@ -1,3 +1,336 @@
+/* --- RESET E VARIABILI GLOBALI --- */
+:root {
+    --primary-color: #1d3557; /* Blu tecnico */
+    --secondary-color: #457b9d; /* Grigio/Blu più chiaro */
+    --accent-color: #f77f00; /* Arancio */
+    --light-color: #f1faee; /* Sfondo chiaro */
+    --dark-color: #000b20;
+    --text-color: #333;
+    --font-family: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- HEADER E NAVIGAZIONE --- */
+.main-header {
+    background: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.main-nav { display: none; } /* Nascosta su mobile */
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--accent-color);
+}
+
+.cta-button-nav {
+    background-color: var(--accent-color);
+    color: #fff !important;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button-nav:hover {
+    background-color: #d96d00;
+}
+
+.mobile-nav-toggle {
+    display: block; /* Visibile su mobile */
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+
+.mobile-nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    position: absolute;
+    transition: all 0.3s;
+}
+
+.mobile-nav-toggle span:nth-child(1) { top: 4px; }
+.mobile-nav-toggle span:nth-child(2) { top: 11px; }
+.mobile-nav-toggle span:nth-child(3) { top: 18px; }
+
+/* --- BOTTONI E ELEMENTI COMUNI --- */
+.cta-button, .secondary-button {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cta-button {
+    background-color: var(--accent-color);
+    color: #fff;
+    border: 2px solid var(--accent-color);
+}
+
+.cta-button:hover {
+    background-color: #d96d00;
+    transform: translateY(-2px);
+}
+
+.secondary-button {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+    margin-left: 10px;
+}
+
+.secondary-button:hover {
+    background-color: var(--light-color);
+    border-color: var(--primary-color);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.section-title p {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* --- SEZIONI --- */
+section { padding: 4rem 0; }
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--light-color);
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero-content .subtitle {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+/* Vision Section */
+#chi-siamo { background-color: #fff; }
+
+.vision-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.vision-grid p { margin-bottom: 1rem; }
+.vision-image img { max-width: 100%; border-radius: 8px; }
+
+/* Services Section */
+.services-section { background-color: var(--light-color); }
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.service-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.service-icon {
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+}
+
+.service-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Resources Section */
+.resources-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+.resource-card {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+.resource-card h4 { margin-bottom: 0.5rem; }
+.resource-card a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+/* FAQ Section */
+.faq-container { max-width: 800px; margin: 0 auto; }
+.faq-item {
+    border-bottom: 1px solid #ddd;
+}
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 1.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+}
+.faq-icon { font-size: 1.5rem; color: var(--accent-color); transition: transform 0.3s; }
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.faq-answer p { padding: 0 0 1.5rem 0; }
+.faq-item.active .faq-icon { transform: rotate(45deg); }
+
+/* Contact Section */
+.contact-section { background-color: var(--light-color); }
+.contact-section h2, .contact-section .subtitle { text-align: center; }
+.contact-form {
+    max-width: 800px;
+    margin: 2rem auto 0;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+.contact-form input, .contact-form select, .contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--font-family);
+    font-size: 1rem;
+}
+.contact-form textarea {
+    margin-top: 1rem;
+}
+.contact-form button {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+/* --- FOOTER --- */
+.main-footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+.main-footer a { color: var(--accent-color); text-decoration: none; }
+
+/* --- RESPONSIVE DESIGN (TABLET E DESKTOP) --- */
+@media (min-width: 768px) {
+    .mobile-nav-toggle { display: none; }
+    .main-nav { display: block; }
+    
+    .hero-content h1 { font-size: 3.5rem; }
+    
+    .vision-grid { grid-template-columns: 1fr 1fr; }
+    
+    .services-grid { grid-template-columns: repeat(3, 1fr); }
+    
+    .resources-grid { grid-template-columns: repeat(3, 1fr); }
+    
+    .form-grid { grid-template-columns: 1fr 1fr; }
+    .form-grid > *:nth-child(3) { grid-column: 1 / 2; }
+    .form-grid > *:nth-child(4) { grid-column: 2 / 3; }
+}
 /* ... (Tutti gli stili precedenti rimangono invariati) ... */
 
 /* --- BOTTONI E ELEMENTI COMUNI --- */
@@ -130,5 +463,45 @@
 
     .platform-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* ... (Tutti gli stili precedenti rimangono invariati) ... */
+
+/* --- SEZIONE TESTIMONIANZE --- */
+.testimonials-section {
+    background-color: var(--light-color);
+    padding: 4rem 0;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonial-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--accent-color);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+}
+
+.testimonial-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+@media (min-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
