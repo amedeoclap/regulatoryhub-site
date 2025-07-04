@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://regulatoryintelligence.ai/sitemap.xml
