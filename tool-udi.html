@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tool UDI - Regulatory Intelligence Hub</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9fbfe;
+      margin: 0;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #0050b3;
+    }
+    label {
+      font-weight: bold;
+      margin-top: 1rem;
+      display: block;
+    }
+    input {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.3rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .output {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #e6f0ff;
+      border: 1px solid #0050b3;
+      border-radius: 5px;
+    }
+  </style>
+  <script>
+    function generaUDI() {
+      const company = document.getElementById("company").value;
+      const model = document.getElementById("model").value;
+      const serial = document.getElementById("serial").value;
+      const udi = "UDI-" + company.substring(0,4).toUpperCase() + "-" + model + "-" + serial;
+      document.getElementById("udi-output").innerText = "✅ Codice UDI generato: " + udi;
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Calcolatore Codice UDI</h1>
+    <p>Compila i campi per generare un codice UDI di esempio per il tuo dispositivo medico:</p>
+    <label for="company">Nome Azienda</label>
+    <input type="text" id="company" placeholder="Es. MedTech Srl">
+
+    <label for="model">Modello Dispositivo</label>
+    <input type="text" id="model" placeholder="Es. MTRX-500">
+
+    <label for="serial">Numero di Serie</label>
+    <input type="text" id="serial" placeholder="Es. 001234567">
+
+    <button onclick="generaUDI()">Genera UDI</button>
+
+    <div class="output" id="udi-output"></div>
+  </div>
+</body>
+</html>
