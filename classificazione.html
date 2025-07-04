@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tool Classificazione MDR 2017/745</title>
+  <meta name="description" content="Tool interattivo per la classificazione preliminare dei dispositivi medici secondo MDR 2017/745">
+  <link rel="stylesheet" href="style-mdr.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>🩺 Tool di Classificazione MDR (UE) 2017/745</h2>
+      <p>Rispondi alle domande per stimare la classe di rischio del tuo dispositivo medico.</p>
+    </header>
+
+    <div id="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+
+    <main id="tool-container">
+      <div id="question-area"></div>
+      <div id="explanation-area" class="hidden"></div>
+    </main>
+
+    <footer id="navigation-area">
+      <button id="back-btn" class="secondary-btn" disabled>Indietro</button>
+      <button id="restart-btn" class="secondary-btn">Ricomincia</button>
+    </footer>
+
+    <div id="result-area" class="hidden"></div>
+  </div>
+
+  <script src="tool-mdr.js"></script>
+</body>
+</html>
