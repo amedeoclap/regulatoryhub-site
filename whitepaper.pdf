@@ -1,0 +1,104 @@
+## 📘 Whitepaper Integrato – MDR 2027: I 10 Errori che bloccheranno il tuo dispositivo
+
+Versione rivista secondo verifica tecnica Claude AI – Luglio 2025
+
+---
+
+## ✅ 1. Ignorare la nuova classificazione dei dispositivi
+Molti dispositivi precedentemente in Classe I ora rientrano in Classi IIa/IIb/III. Alcune classi (es. dispositivi su misura, sistemi e kit procedurali) seguono regole specifiche. (Rif. Art. 52 MDR)
+
+👉 **Azione consigliata:** riclassifica secondo Annex VIII MDR.
+
+---
+
+## ✅ 2. Mancanza del Person Responsible for Regulatory Compliance (PRRC)
+Tutte le aziende UE devono nominare un PRRC interno o esterno.  
+
+👉 **Azione:** verifica qualifica, ruolo e responsabilità documentate.
+
+---
+
+## ✅ 3. Documentazione tecnica incompleta o obsoleta
+Il fascicolo tecnico deve seguire sia Annex II che Annex III MDR. (Rif. Art. 10(8) MDR)
+
+👉 **Checklist tecnica:** GSPR, Clinical Evaluation, PMS, UDI, IFU.
+
+---
+
+## ✅ 4. Nessun sistema PMS o sorveglianza post-market
+Serve un piano documentato e un sistema di raccolta continua (reclami, incidenti, feedback).
+
+👉 **Azione:** attiva un sistema di sorveglianza strutturato.
+
+---
+
+## ✅ 5. Etichettatura non aggiornata (UDI mancante)
+L'UDI (Unique Device Identification) è obbligatoria e deve essere integrata con EUDAMED.
+
+👉 **Errore frequente:** lasciare codice a barre GS1 non mappato.
+
+---
+
+## ✅ 6. Non conformità all'obbligo di tracciabilità
+Importatori e distributori devono conservare per almeno 10 anni (impiantabili) o 5 anni (altri) la documentazione di ogni lotto. (Rif. Art. 25(8) MDR)
+
+👉 **Azione:** digitalizza e centralizza il registro fornitori e tracciabilità.
+
+---
+
+## ✅ 7. Assenza di registrazione EUDAMED
+Alcune sezioni di EUDAMED (es. Actor Registration Module) sono già obbligatorie.
+
+👉 **Azione:** richiedi SRN, compila modulo EUDAMED.
+
+---
+
+## ✅ 8. Importatori non identificati formalmente
+Per dispositivi extra-UE è obbligatoria la figura dell’Authorized Representative.
+
+👉 **Errore comune:** scaricare la responsabilità solo sul fabbricante estero.
+
+---
+
+## ✅ 9. Ignorare il payback e i flussi informativi AIFA
+I distributori sono coinvolti nei meccanismi di recupero e riparto in Italia. (Rif. D.M. 11.10.2022)
+
+👉 **Azione:** allineati a D.M. e aggiornamenti futuri.
+
+---
+
+## ✅ 10. Nessuna simulazione di audit Notified Body
+Aspettare l’audit senza simulazioni → altissimo rischio di blocco.
+
+👉 **Azione:** esegui un audit simulato MDR in-house o tramite partner.
+
+---
+
+## 📌 Altri rischi critici da considerare
+
+### ⚠️ Mancata rivalutazione clinica per dispositivi legacy
+L'equivalenza con altri dispositivi non è più sufficiente. Serve nuova evidenza clinica. (Rif. Art. 61(6) MDR)
+
+### ⚠️ Classificazione errata di software come non-dispositivo
+Molti software rientrano nel MDR. Riferimento: MDCG 2019-11.
+
+---
+
+## 💡 Approfondimenti laterali (Box)
+
+### 💡 Lo sapevi che...
+Anche i dispositivi di classe I sterili o con funzione di misura richiedono ora l'intervento di un Organismo Notificato? (Rif. Art. 52(7) MDR)
+
+### ⚠️ Errore frequente:
+Pensare che il MDR si applichi solo ai fabbricanti. Importatori e distributori hanno responsabilità specifiche. (Rif. Art. 13–14 MDR)
+
+---
+
+## 🔚 Conclusione
+
+Non aspettare il 2026. Il tempo per correggere questi errori è ora. Questa checklist non sostituisce un audit, ma ti aiuta a prevenire blocchi e sanzioni.
+
+👉 Scarica la versione PDF aggiornata su: regulatoryintelligence.ai
+👉 Fai il quiz MDR per capire a che punto sei
+👉 Iscriviti alla newsletter AI-powered per alert MDR/IVDR automatici
+
