@@ -117,6 +117,14 @@
         transform: translateY(-3px);
         box-shadow: var(--shadow-hover);
     }
+    .btn.disabled {
+        background-color: #a0a0a0;
+        cursor: not-allowed;
+    }
+    .btn.disabled:hover {
+        transform: none;
+        box-shadow: var(--shadow);
+    }
 
     /* --- Sezioni Contenuto e Card --- */
     .text-center {
@@ -137,6 +145,8 @@
       box-shadow: var(--shadow);
       text-align: center;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
     }
     .card:hover {
         transform: translateY(-5px);
@@ -145,8 +155,18 @@
     .card h3 {
         font-size: 1.3rem;
     }
+    .card p {
+        flex-grow: 1;
+    }
     .card .btn {
         margin-top: 1.5rem;
+    }
+    .card.placeholder {
+        background-color: #f9f9f9;
+        color: #888;
+    }
+    .card.placeholder h3 {
+        color: #888;
     }
 
     .cta-block {
@@ -211,9 +231,9 @@
 
     <section class="hero">
       <div class="container">
-        <h1>Semplifichiamo la compliance MedTech con l’AI</h1>
-        <p>Soluzioni digitali per la conformità a MDR, IVDR e ISO 13485. Riduci i tempi, minimizza i rischi e accelera il tuo go-to-market.</p>
-        <a href="#servizi" class="btn">Scopri gli strumenti</a>
+        <h1>Semplifichiamo la compliance con l’AI</h1>
+        <p>Soluzioni digitali per la conformità normativa nei settori MedTech, Manifatturiero, Tech e per Startup. Riduci i tempi, minimizza i rischi e accelera il tuo go-to-market.</p>
+        <a href="#servizi" class="btn">Scopri i nostri servizi</a>
       </div>
     </section>
 
@@ -227,27 +247,41 @@
 
     <section id="servizi">
       <div class="container">
-        <h2 style="margin-bottom: 1rem;">Strumenti Regolatori Intelligenti</h2>
-        <p class="text-center" style="max-width: 700px; margin: 0 auto 3rem;">I nostri tool interattivi sono progettati per darti risposte rapide e affidabili, semplificando i processi di compliance più complessi.</p>
+        <h2 style="margin-bottom: 1rem;">Servizi e Tool per la Compliance</h2>
+        <p class="text-center" style="max-width: 800px; margin: 0 auto 3rem;">Offriamo strumenti interattivi e servizi di consulenza per diversi settori. Inizia con i nostri tool per il MedTech e scopri le soluzioni in arrivo per gli altri mercati.</p>
+        
         <div class="services-grid">
           <div class="card">
             <h3>Classificazione MDR</h3>
-            <p>Scopri la classe di rischio del tuo dispositivo in base al Regolamento 2017/745 rispondendo a domande guidate.</p>
+            <p><strong>Settore: MedTech.</strong> Scopri la classe di rischio del tuo dispositivo medico rispondendo a domande guidate dal regolamento MDR.</p>
             <a href="classificazione.html" class="btn">Avvia il Tool</a>
           </div>
           <div class="card">
-            <h3>Generatore UDI</h3>
-            <p>Crea un codice UDI-DI valido per i tuoi prodotti e simula la sua struttura per EUDAMED.</p>
-            <a href="tool-udi.html" class="btn">Prova lo Strumento</a>
-          </div>
-          <div class="card">
             <h3>Quiz di Prontezza MDR</h3>
-            <p>Valuta la preparazione normativa del tuo dispositivo con il nostro quiz rapido e ottieni un punteggio istantaneo.</p>
+            <p><strong>Settore: MedTech.</strong> Valuta la preparazione normativa del tuo dispositivo con il nostro quiz e ottieni un punteggio istantaneo.</p>
             <a href="quiz.html" class="btn">Inizia il Quiz</a>
           </div>
-        </div>
-        <div class="text-center">
-            <a href="tool-ce.html" class="btn">Verifica Marcatura CE</a>
+          <div class="card">
+            <h3>Generatore UDI</h3>
+            <p><strong>Settore: MedTech.</strong> Crea un codice UDI-DI valido per i tuoi prodotti e simula la sua struttura per EUDAMED.</p>
+            <a href="tool-udi.html" class="btn">Prova lo Strumento</a>
+          </div>
+          
+          <div class="card placeholder">
+            <h3>Compliance Manifatturiero</h3>
+            <p><strong>Settore: Industria.</strong> Tool per la direttiva macchine e la gestione dei sistemi qualità ISO 9001.</p>
+            <a href="#" class="btn disabled">Presto Disponibile</a>
+          </div>
+          <div class="card placeholder">
+            <h3>Check-up GDPR</h3>
+            <p><strong>Settore: Tech & Digital.</strong> Analizza la conformità di SaaS, piattaforme e app alla normativa sulla privacy.</p>
+            <a href="#" class="btn disabled">Presto Disponibile</a>
+          </div>
+          <div class="card placeholder">
+            <h3>Regulatory Roadmap</h3>
+            <p><strong>Settore: Startup.</strong> Definisci il percorso normativo per la tua idea, dalla MVP al mercato, e valuta i rischi.</p>
+            <a href="#" class="btn disabled">Presto Disponibile</a>
+          </div>
         </div>
       </div>
     </section>
