@@ -1,17 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Quiz MDR - RIH</title>
+  <title>Quiz MDR - Regulatory Intelligence Hub</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <style>
-    body { font-family: Arial, sans-serif; padding: 2rem; line-height: 1.6; max-width: 800px; margin: auto; }
-    h1 { color: #0050b3; }
-    form { margin-top: 2rem; }
-    label { display: block; margin-top: 1rem; }
-    button { margin-top: 2rem; padding: 0.5rem 1rem; background-color: #0050b3; color: white; border: none; }
-    #email-cta { display: none; margin-top: 3rem; padding: 1rem; border: 1px solid #ddd; background-color: #f7f9fc; }
+      :root{--primary-color:#0050b3;--secondary-color:#007bff;--background-light:#f7f9fc;--text-color:#333;--text-light:#555;--white-color:#ffffff;--border-color:#e0e0e0;--shadow:0 4px 12px rgba(0,0,0,.08)}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;margin:0;line-height:1.6;color:var(--text-color);background-color:var(--background-light)}.container{max-width:800px;margin:2rem auto;padding:2rem;background-color:var(--white-color);border-radius:12px;box-shadow:var(--shadow)}.main-header{background-color:var(--white-color);padding:1rem 0;border-bottom:1px solid var(--border-color)}.main-header .container{display:flex;align-items:center}.logo{display:flex;align-items:center;font-weight:600;font-size:1.2rem;text-decoration:none;color:var(--primary-color)}.logo img{height:40px;margin-right:.75rem}h1,h2{color:var(--primary-color);text-align:center}form{margin-top:2rem}label{display:block;margin-top:1.5rem;font-weight:600}input[type=email],select{width:100%;padding:0.8rem;margin-top:0.5rem;border:1px solid var(--border-color);border-radius:8px;background-color:var(--white-color);font-size:1rem}.btn{display:inline-block;width:100%;background:var(--secondary-color);color:white;padding:.8rem 1.8rem;border-radius:50px;text-decoration:none;font-weight:600;border:none;cursor:pointer;margin-top:2rem;font-size:1.1rem;transition:transform .2s ease,box-shadow .2s ease}.btn:hover{transform:translateY(-3px)}#email-cta{display:none;margin-top:2rem;padding:2rem;border-radius:12px;background-color:var(--background-light);text-align:center}#email-cta ul{list-style-position:inside;text-align:left;margin:1.5rem 0;padding:0}footer{text-align:center;padding:2rem 1rem;font-size:.9rem;color:#555}footer a{color:var(--primary-color);font-weight:500}@media (max-width:768px){.container{margin:1rem;padding:1.5rem}h1{font-size:1.8rem}}
   </style>
   <script>
     function mostraEmailForm(event) {
@@ -22,42 +17,53 @@
   </script>
 </head>
 <body>
-  <h1>Quiz MDR – Quanto sei conforme?</h1>
-  <form id="quiz-form" onsubmit="mostraEmailForm(event)">
-    <label>1. Hai già classificato i tuoi dispositivi secondo l’Annex VIII MDR?
-      <select><option>Sì</option><option>No</option><option>Non so</option></select>
-    </label>
-    <label>2. Hai nominato un PRRC?
-      <select><option>Sì</option><option>No</option><option>In valutazione</option></select>
-    </label>
-    <label>3. Il fascicolo tecnico è aggiornato?
-      <select><option>Completo</option><option>Parziale</option><option>Non ancora</option></select>
-    </label>
-    <label>4. Hai registrato l’attore su EUDAMED (SRN)?
-      <select><option>Sì</option><option>No</option><option>Non so</option></select>
-    </label>
-    <label>5. Vuoi ricevere una checklist gratuita?
-      <select><option>Sì</option><option>No</option></select>
-    </label>
-    <button type="submit">Invia</button>
-  </form>
 
-  <div id="email-cta">
-    <h2>🎉 Hai completato il quiz!</h2>
-    <p>Inserisci la tua email per ricevere:</p>
-    <ul>
-      <li>📘 Il whitepaper “MDR 2027: 10 errori da evitare”</li>
-      <li>✅ Una checklist personalizzata</li>
-      <li>🧪 Accesso anticipato agli strumenti RIH</li>
-    </ul>
-    <form action="https://23bc19b1.sibforms.com/serve/MUIFAHFAalxP7m4SFUXFKKYs58Ls3e9PuRv0roDGlpkVbZ0FfmKsqqfrC2s8Ve_lQ8ky4d63rOkxcMJoOILGzSj_6JoM22DtPelLj7ncTFqn1unpo6iEb1T9zMCHeHQrR7UxEf6aXqNVILwnhYeHzlOAg19yRakrMN9y4KRFdjtdPUz2CgfbsYJAhUH0VMeTTocdAz8CCnVvDpdu" method="POST" target="_blank">
-      <label>Email:
-        <input type="email" name="email" required>
-      </label>
-      <button type="submit">Ricevi tutto via email</button>
+  <header class="main-header">
+    <div class="container" style="box-shadow: none; padding: 0;">
+      <a href="index.html" class="logo">
+        <img src="logo.svg" alt="Logo Regulatory Intelligence Hub">
+        <span>Regulatory Intelligence Hub</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Quiz MDR – Quanto sei conforme?</h1>
+    <form id="quiz-form" onsubmit="mostraEmailForm(event)">
+      <label for="q1">1. Hai già classificato i tuoi dispositivi secondo l’Annex VIII MDR?</label>
+      <select id="q1"><option>Sì</option><option>No</option><option>Non so</option></select>
+      
+      <label for="q2">2. Hai nominato un PRRC (Persona Responsabile del Rispetto della Normativa)?</label>
+      <select id="q2"><option>Sì</option><option>No</option><option>In valutazione</option></select>
+      
+      <label for="q3">3. Il tuo fascicolo tecnico è aggiornato secondo i requisiti MDR?</label>
+      <select id="q3"><option>Sì, è completo</option><option>Parzialmente</option><option>No, da iniziare</option></select>
+      
+      <label for="q4">4. Hai registrato la tua azienda su EUDAMED ottenendo l'SRN?</label>
+      <select id="q4"><option>Sì</option><option>No</option><option>Non so cosa sia</option></select>
+      
+      <button type="submit" class="btn">Vedi il tuo risultato</button>
     </form>
+  
+    <div id="email-cta">
+      <h2>🎉 Hai completato il quiz!</h2>
+      <p>Un ultimo passo per ricevere il tuo profilo di rischio e il materiale gratuito.</p>
+      <form action="https://23bc19b1.sibforms.com/serve/MUIFAHFAalxP7m4SFUXFKKYs58Ls3e9PuRv0roDGlpkVbZ0FfmKsqqfrC2s8Ve_lQ8ky4d63rOkxcMJoOILGzSj_6JoM22DtPelLj7ncTFqn1unpo6iEb1T9zMCHeHQrR7UxEf6aXqNVILwnhYeHzlOAg19yRakrMN9y4KRFdjtdPUz2CgfbsYJAhUH0VMeTTocdAz8CCnVvDpdu" method="POST" target="_blank">
+        <label for="email-input">Inserisci la tua migliore email:</label>
+        <input type="email" id="email-input" name="email" required placeholder="nome@azienda.it">
+        <button type="submit" class="btn">Invia e Ricevi il Materiale</button>
+      </form>
+       <ul>
+        <li>📘 Il whitepaper “MDR 2027: 10 errori da evitare”</li>
+        <li>✅ Una checklist di compliance personalizzata</li>
+        <li>🧪 Accesso anticipato ai nostri tool</li>
+      </ul>
+    </div>
   </div>
 
-  <p style="margin-top: 3rem;"><a href="index.html">← Torna alla Home</a></p>
+  <footer>
+    <p><a href="index.html">← Torna alla Home</a></p>
+  </footer>
+
 </body>
 </html>
