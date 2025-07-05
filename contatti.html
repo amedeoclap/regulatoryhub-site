@@ -6,52 +6,57 @@
     <title>Contatti - Regulatory Intelligence Hub</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 2rem;
-            line-height: 1.6;
-        }
-        footer {
-            background-color: #f8f9fa;
-            padding: 2rem;
-            text-align: center;
-            font-size: 0.9rem;
-            margin-top: 3rem;
-        }
-        footer img {
-            height: 40px;
-            margin-bottom: 1rem;
-        }
-        footer a {
-            margin: 0 0.5rem;
-        }
+        :root{--primary-color:#0050b3;--secondary-color:#007bff;--background-light:#f7f9fc;--text-color:#333;--text-light:#555;--white-color:#ffffff;--border-color:#e0e0e0;--shadow:0 4px 12px rgba(0,0,0,.08);--shadow-hover:0 6px 16px rgba(0,0,0,.12)}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;margin:0;line-height:1.7;color:var(--text-color);background-color:var(--white-color);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.container{max-width:1100px;margin:0 auto;padding:0 1.5rem}h1,h2,h3{color:var(--primary-color);font-weight:700;line-height:1.3}h1{font-size:2.8rem}h2{font-size:2.2rem}p{color:var(--text-light)}.main-header{background-color:var(--white-color);padding:1rem 0;border-bottom:1px solid var(--border-color);position:sticky;top:0;z-index:1000}.main-header .container{display:flex;justify-content:space-between;align-items:center}.logo{display:flex;align-items:center;font-weight:600;font-size:1.2rem;text-decoration:none;color:var(--primary-color)}.logo img{height:40px;margin-right:.75rem}.main-nav a{margin:0 1rem;color:var(--text-light);text-decoration:none;font-weight:500;transition:color .3s ease}.main-nav a:hover{color:var(--primary-color)}.btn{display:inline-block;background:var(--secondary-color);color:white;padding:.8rem 1.8rem;border-radius:50px;text-decoration:none;font-weight:600;transition:transform .2s ease,box-shadow .2s ease}.btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}footer{background:#333;color:#ccc;text-align:center;padding:2.5rem 0;font-size:.9rem;margin-top:4rem}footer a{color:white;margin:0 .5rem;text-decoration:none}footer a:hover{text-decoration:underline}footer .footer-links{margin-bottom:1rem}.page-header{background-color:var(--background-light);padding:4rem 0;text-align:center;border-bottom:1px solid var(--border-color)}.page-header h1{margin:0}.contact-info{background-color:var(--white-color);padding:2.5rem;border-radius:12px;margin:2rem auto;text-align:center;max-width:700px;box-shadow:var(--shadow)}.contact-info h3{margin-top:0;font-size:1.5rem;color:var(--text-color)}.contact-info a{color:var(--secondary-color);font-weight:500;word-break:break-all}@media (max-width:768px){h1{font-size:2.2rem}.main-header .container{flex-direction:column;gap:1rem}.main-nav{width:100%;text-align:center;display:flex;flex-direction:column;gap:.5rem}.main-nav a{padding:.5rem;border-radius:8px}.main-nav a:hover{background-color:var(--background-light)}}
     </style>
 </head>
 <body>
-    <header>
-        <img src="logo.svg" alt="Logo Regulatory Intelligence Hub" style="height: 60px;">
+
+    <header class="main-header">
+      <div class="container">
+        <a href="index.html" class="logo">
+            <img src="logo.svg" alt="Logo Regulatory Intelligence Hub">
+            <span>Regulatory Intelligence Hub</span>
+        </a>
+        <nav class="main-nav">
+          <a href="index.html#chi-siamo">Chi Siamo</a>
+          <a href="index.html#servizi">Servizi</a>
+          <a href="chi-siamo.html">La Nostra Storia</a>
+        </nav>
+      </div>
     </header>
 
     <main>
-    
-<h1>Contatti</h1>
-<p>Hai bisogno di supporto o vuoi testare il nostro servizio?</p>
-<p>Scrivici a: <a href="mailto:info@regulatoryintelligence.ai">info@regulatoryintelligence.ai</a></p>
-<p>PEC: <a href="mailto:rih@pec.it">rih@pec.it</a></p>
-<p>Sede legale: Salerno | Sede operativa: Roma</p>
-<p>Oppure compila il form sulla nostra piattaforma (prossimamente online).</p>
+        <div class="page-header">
+            <h1>Contattaci</h1>
+            <p style="color:var(--text-color); max-width: 600px; margin: 1rem auto 0;">Siamo a tua disposizione per una demo o per rispondere a qualsiasi domanda.</p>
+        </div>
 
+        <div class="container" style="padding-top: 3rem; padding-bottom: 3rem;">
+            <div class="contact-info">
+                <h3>Informazioni di Contatto</h3>
+                <p><strong>Email:</strong><br> <a href="mailto:info@regulatoryintelligence.ai">info@regulatoryintelligence.ai</a></p>
+                <p><strong>Posta Elettronica Certificata (PEC):</strong><br> <a href="mailto:rih@pec.it">rih@pec.it</a></p>
+                <p><strong>Sedi:</strong><br> Salerno (Sede Legale)<br> Roma (Sede Operativa)</p>
+            </div>
+
+            <div class="contact-info" style="background-color: var(--background-light);">
+                <h3>Richiedi una Demo Gratuita</h3>
+                <p>Vuoi vedere i nostri strumenti in azione? Contattaci per prenotare una sessione di demo personalizzata e senza impegno.</p>
+                <a href="mailto:info@regulatoryintelligence.ai?subject=Richiesta%20Demo%20Gratuita" class="btn">Prenota la tua Demo</a>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <img src="logo.svg" alt="Logo Regulatory Intelligence Hub"><br>
-        <p>&copy; 2025 Regulatory Intelligence Hub – Tutti i diritti riservati.</p>
-        <p>Sedi: <b>Salerno</b> (legale) – <b>Roma</b> (operativa)</p>
-        <p>P. IVA: [numero in assegnazione]</p>
-        <p>
-            <a href="/privacy.html">Privacy Policy</a> |
-            <a href="/cookie.html">Cookie Policy</a>
-        </p>
+      <div class="container">
+          <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="cookie.html">Cookie Policy</a> |
+            <a href="whitepaper_rih.pdf">Whitepaper</a>
+          </div>
+          <p>&copy; 2025 Regulatory Intelligence Hub – P. IVA: [in registrazione]</p>
+      </div>
     </footer>
+
 </body>
 </html>
