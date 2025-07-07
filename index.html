@@ -5,17 +5,356 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Regulatory Intelligence Hub - Compliance Semplificata con AI</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+
   <style>
-    /* ... (CSS esistente rimane invariato) ... */
-    :root{--primary-color:#0050b3;--secondary-color:#007bff;--background-light:#f7f9fc;--text-color:#333;--text-light:#555;--white-color:#ffffff;--border-color:#e0e0e0;--shadow:0 4px 12px rgba(0,0,0,.08);--shadow-hover:0 6px 16px rgba(0,0,0,.12)}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;margin:0;line-height:1.7;color:var(--text-color);background-color:var(--white-color);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.container{max-width:1100px;margin:0 auto;padding:0 1.5rem}section{padding:4rem 0}section:nth-child(even){background-color:var(--background-light)}h1,h2,h3{color:var(--primary-color);font-weight:700;line-height:1.3}h1{font-size:2.8rem}h2{font-size:2.2rem;text-align:center;margin-bottom:3rem}h3{font-size:1.4rem;margin-bottom:.75rem}p{color:var(--text-light)}.main-header{background-color:var(--white-color);padding:1rem 0;border-bottom:1px solid var(--border-color);position:sticky;top:0;z-index:1000}.main-header .container{display:flex;justify-content:space-between;align-items:center}.logo{display:flex;align-items:center;font-weight:600;font-size:1.2rem;text-decoration:none;color:var(--primary-color)}.logo img{height:40px;margin-right:.75rem}.main-nav a{margin:0 1rem;color:var(--text-light);text-decoration:none;font-weight:500;transition:color .3s ease}.main-nav a:hover{color:var(--primary-color)}.hero{background-color:var(--primary-color);color:white;text-align:center;padding:5rem 1.5rem}.hero h1,.hero p{color:white}.hero p{max-width:700px;margin:1.5rem auto 2.5rem;font-size:1.1rem}.btn{display:inline-block;background:var(--secondary-color);color:white;padding:.8rem 1.8rem;border-radius:50px;text-decoration:none;font-weight:600;transition:transform .2s ease,box-shadow .2s ease}.btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}.btn.disabled{background-color:#a0a0a0;cursor:not-allowed;pointer-events:none}.btn.disabled:hover{transform:none;box-shadow:var(--shadow)}.text-center{text-align:center}.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}.card{background:white;border:1px solid var(--border-color);padding:2rem;border-radius:12px;box-shadow:var(--shadow);text-align:center;transition:transform .2s ease,box-shadow .2s ease;display:flex;flex-direction:column}.card:hover{transform:translateY(-5px);box-shadow:var(--shadow-hover)}.card h3{font-size:1.3rem}.card p{flex-grow:1}.card .btn{margin-top:1.5rem}.card.placeholder{background-color:#f9f9f9;color:#888}.card.placeholder h3{color:#888}.cta-block{background:var(--background-light);padding:2.5rem;border-radius:12px;margin:2rem auto;text-align:center;max-width:700px;border:1px solid var(--border-color)}footer{background:var(--background-light);color:var(--text-color);text-align:center;padding:3rem 0;font-size:.9rem;border-top:1px solid var(--border-color)}footer p{margin:0.5rem 0;color:var(--text-light)}footer a{color:var(--primary-color);text-decoration:none;font-weight:500}footer a:hover{text-decoration:underline}footer .footer-links{margin-bottom:1rem}@media (max-width:992px){.main-nav a{margin:0 .5rem}}@media (max-width:768px){h1{font-size:2.2rem}h2{font-size:1.8rem}section{padding:3rem 0}.main-header .container{flex-direction:column;gap:1rem}.main-nav{width:100%;text-align:center;display:flex;flex-direction:column;gap:.5rem}.main-nav a{padding:.5rem;border-radius:8px}.main-nav a:hover{background-color:var(--background-light)}.services-grid{grid-template-columns:1fr}.cta-block{padding:1.5rem}}
+    /* --- Variabili Colore e Stile (Impostazioni Base) --- */
+    :root {
+      --primary-color: #0050b3;
+      --secondary-color: #007bff;
+      --background-light: #f7f9fc;
+      --text-color: #333;
+      --text-light: #555;
+      --white-color: #ffffff;
+      --border-color: #e0e0e0;
+      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    /* --- Stili Generali e Tipografia --- */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      line-height: 1.7;
+      color: var(--text-color);
+      background-color: var(--white-color);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    section {
+      padding: 4rem 0;
+    }
+    
+    section:nth-child(even) {
+        background-color: var(--background-light);
+    }
+
+    h1, h2, h3 { 
+      color: var(--primary-color); 
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.2rem; text-align: center; margin-bottom: 3rem; }
+    h3 { font-size: 1.4rem; margin-bottom: 0.75rem; }
+    p { color: var(--text-light); }
+
+    /* --- Header e Navigazione --- */
+    .main-header {
+      background-color: var(--white-color);
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .main-header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+    .logo img {
+      height: 40px;
+      margin-right: 0.75rem;
+    }
+    .main-nav a {
+      margin: 0 1rem;
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .main-nav a:hover {
+      color: var(--primary-color);
+    }
+
+    /* --- Sezione Hero --- */
+    .hero {
+      background-color: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 5rem 1.5rem;
+    }
+    .hero h1, .hero p {
+        color: white;
+    }
+    .hero p { max-width: 700px; margin: 1.5rem auto 2.5rem; font-size: 1.1rem; }
+
+    /* --- Pulsanti (Call to Action) --- */
+    .btn {
+      display: inline-block;
+      background: var(--secondary-color);
+      color: white;
+      padding: 0.8rem 1.8rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-hover);
+    }
+    .btn.disabled {
+        background-color: #a0a0a0;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+    .btn.disabled:hover {
+        transform: none;
+        box-shadow: var(--shadow);
+    }
+
+    /* --- Sezioni Contenuto e Card --- */
+    .text-center {
+        text-align: center;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      border: 1px solid var(--border-color);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+    }
+    .card h3 {
+        font-size: 1.3rem;
+    }
+    .card p {
+        flex-grow: 1;
+    }
+    .card .btn {
+        margin-top: 1.5rem;
+    }
+    .card.placeholder {
+        background-color: #f9f9f9;
+        color: #888;
+    }
+    .card.placeholder h3 {
+        color: #888;
+    }
+
+    .cta-block {
+      background: var(--background-light);
+      padding: 2.5rem;
+      border-radius: 12px;
+      margin: 2rem auto;
+      text-align: center;
+      max-width: 700px;
+      border: 1px solid var(--border-color);
+    }
+
+    /* --- Footer --- */
+    footer {
+      background: #333;
+      color: #ccc;
+      text-align: center;
+      padding: 2.5rem 0;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: white;
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+    footer a:hover {
+        text-decoration: underline;
+    }
+    footer .footer-links {
+        margin-bottom: 1rem;
+    }
+    
+    /* ==========================================================================
+       === CORREZIONI URGENTI: MEDIA QUERIES PER IL RESPONSIVE DESIGN (MOBILE) ===
+       ========================================================================== */
+    @media (max-width: 992px) {
+        .main-nav a {
+            margin: 0 0.5rem; /* Riduci lo spazio tra i link del menu */
+        }
+    }
+    
+    @media (max-width: 768px) {
+      /* Adatta la tipografia per schermi più piccoli */
+      h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.8rem; }
+      section { padding: 3rem 0; }
+
+      /* Riorganizza l'header per mobile */
+      .main-header .container {
+          flex-direction: column;
+          gap: 1rem;
+      }
+      .main-nav {
+          width: 100%;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+      }
+      .main-nav a {
+          padding: 0.5rem;
+          border-radius: 8px;
+      }
+      .main-nav a:hover {
+          background-color: var(--background-light);
+      }
+
+      /* Assicura che la griglia dei servizi sia a colonna singola */
+      .services-grid {
+          grid-template-columns: 1fr;
+      }
+
+      /* Migliora la leggibilità dei blocchi CTA */
+      .cta-block {
+          padding: 1.5rem;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <header class="main-header"></header>
-  <main></main>
+<header class="main-header">
+  <div class="container">
+    <a href="index.html" class="logo">
+        <img src="logo.svg" alt="Logo Regulatory Intelligence Hub">
+        <span>Regulatory Intelligence Hub</span>
+    </a>
+    <nav class="main-nav">
+      <a href="#chi-siamo">Chi Siamo</a>
+      <a href="#servizi">Servizi</a>
+      <a href="#perche-investire">Perché Noi</a>
+      <a href="#contatti">Contattaci</a>
+    </nav>
+  </div>
+</header>
 
-  <footer>
+<main>
+
+    <section class="hero">
+      <div class="container">
+        <h1>Semplifichiamo la compliance con l’AI</h1>
+        <p>Soluzioni digitali per la conformità normativa nei settori MedTech, Manifatturiero, Tech e per Startup. Riduci i tempi, minimizza i rischi e accelera il tuo go-to-market.</p>
+        <a href="#servizi" class="btn">Scopri i nostri servizi</a>
+      </div>
+    </section>
+
+    <section id="chi-siamo">
+      <div class="container text-center" style="max-width: 800px;">
+        <h2>Dove l'expertise incontra l'innovazione</h2>
+        <p>Nasciamo dall'incontro tra la precisione normativa europea e l'intelligenza artificiale. La nostra missione è trasformare la compliance da ostacolo burocratico a vantaggio competitivo tangibile per le PMI italiane. Uniamo competenze certificate in ambito regulatory, data protection e AI per offrire soluzioni concrete.</p>
+        <a href="chi-siamo.html" class="btn" style="margin-top: 1.5rem;">Scopri la nostra storia</a>
+      </div>
+    </section>
+
+    <section id="servizi">
+      <div class="container">
+        <h2 style="margin-bottom: 1rem;">Servizi e Tool per la Compliance</h2>
+        <p class="text-center" style="max-width: 800px; margin: 0 auto 3rem;">Offriamo strumenti interattivi e servizi di consulenza per diversi settori. Inizia con i nostri tool per il MedTech e scopri le soluzioni in arrivo per gli altri mercati.</p>
+        
+        <div class="services-grid">
+          <div class="card">
+            <h3>Classificazione MDR</h3>
+            <p><strong>Settore: MedTech.</strong> Scopri la classe di rischio del tuo dispositivo medico rispondendo a domande guidate dal regolamento MDR.</p>
+            <a href="classificazione.html" class="btn">Avvia il Tool</a>
+          </div>
+          <div class="card">
+            <h3>Quiz di Prontezza MDR</h3>
+            <p><strong>Settore: MedTech.</strong> Valuta la preparazione normativa del tuo dispositivo con il nostro quiz e ottieni un punteggio istantaneo.</p>
+            <a href="quiz.html" class="btn">Inizia il Quiz</a>
+          </div>
+          <div class="card">
+            <h3>Generatore UDI</h3>
+            <p><strong>Settore: MedTech.</strong> Crea un codice UDI-DI valido per i tuoi prodotti e simula la sua struttura per EUDAMED.</p>
+            <a href="tool-udi.html" class="btn">Prova lo Strumento</a>
+          </div>
+          
+          <div class="card placeholder">
+            <h3>Compliance Manifatturiero</h3>
+            <p><strong>Settore: Industria.</strong> Tool per la direttiva macchine e la gestione dei sistemi qualità ISO 9001.</p>
+            <a href="#" class="btn disabled">Presto Disponibile</a>
+          </div>
+          <div class="card placeholder">
+            <h3>Check-up GDPR</h3>
+            <p><strong>Settore: Tech & Digital.</strong> Analizza la conformità di SaaS, piattaforme e app alla normativa sulla privacy.</p>
+            <a href="#" class="btn disabled">Presto Disponibile</a>
+          </div>
+          <div class="card placeholder">
+            <h3>Regulatory Roadmap</h3>
+            <p><strong>Settore: Startup.</strong> Definisci il percorso normativo per la tua idea, dalla MVP al mercato, e valuta i rischi.</p>
+            <a href="#" class="btn disabled">Presto Disponibile</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="perche-investire">
+      <div class="container text-center" style="max-width: 800px;">
+        <h2>Oltre la Burocrazia: la Compliance come Vantaggio Strategico</h2>
+        <p>Molti vedono la compliance come un costo. Noi la trasformiamo in un investimento. Affidarsi a soluzioni superficiali porta a fascicoli bloccati, audit falliti e lanci posticipati.</p>
+        <p>Con Regulatory Intelligence Hub, la conformità diventa parte integrante della strategia, permettendoti di:</p>
+        <ul style="text-align: left; display: inline-block; margin-top: 1rem;">
+          <li>✅ Rivedere l'intero progetto fin dalla fase di concept.</li>
+          <li>✅ Evitare gli errori normativi più comuni che bloccano la certificazione.</li>
+          <li>✅ Accelerare il go-to-market, eliminando le sorprese.</li>
+        </ul>
+        <p><strong>Ti aiutiamo a progettare un prodotto conforme, scalabile e pronto per il mercato europeo.</strong></p>
+        <a href="contact.html" class="btn" style="margin-top: 1.5rem;">Parla con un esperto</a>
+      </div>
+    </section>
+
+    <section id="contatti">
+      <div class="container">
+        <div class="cta-block">
+          <h3>📘 Scarica il Whitepaper 2025</h3>
+          <p>Le 10 barriere alla certificazione MDR e come superarle. Una guida essenziale pensata per PMI e startup MedTech.</p>
+          <a href="whitepaper_rih.pdf" class="btn" download>Scarica il PDF</a>
+        </div>
+        <div class="cta-block">
+          <h3>📞 Hai bisogno di supporto personalizzato?</h3>
+          <p>Contattaci per una consulenza gratuita. Analizzeremo insieme il tuo percorso di conformità e ti mostreremo il valore dei nostri strumenti.</p>
+          <a href="contact.html" class="btn">Richiedi una Demo</a>
+        </div>
+      </div>
+    </section>
+</main>
+
+<footer>
     <div class="container">
       <p><strong>RIH Platform</strong> – Compliance made simple</p>
       <p>Powered by <strong>AE Consulting</strong></p>
