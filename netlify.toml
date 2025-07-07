@@ -6,3 +6,9 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+[[redirects]]
+  from = "https://www.regulatoryintelligence.ai/*"
+  to = "https://regulatoryintelligence.ai/:splat"
+  status = 301
+  force = true
