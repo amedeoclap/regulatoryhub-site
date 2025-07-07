@@ -2,6 +2,21 @@
   "title": "Regulatory Intelligence Hub",
   "description": "Piattaforma AI per semplificare la compliance MDR, IVDR, ISO 13485, GDPR nel settore MedTech. Cruscotto interattivo, checklist intelligenti e microservizi modulari.",
   "keywords": "MDR, IVDR, ISO 13485, GDPR, medical devices, compliance, regolatorio, EU, MedTech, intelligenza artificiale",
-  "author": "CLAP Srl",
+  "author": "Ae Consulting",
   "robots": "index, follow"
 }
+<meta name="description" content="Semplifica la compliance MDR/IVDR, GDPR e ISO 13485 con RIH. Strumenti AI, consulenza e dashboard per medtech e PMI. Audit gratuito.">
+<meta name="keywords" content="MDR, IVDR, ISO 13485, GDPR, Medical Device, RegTech, AI compliance, audit, documentazione tecnica">
+<link rel="canonical" href="https://regulatoryintelligence.ai/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Regulatory Intelligence Hub",
+  "url": "https://regulatoryintelligence.ai",
+  "logo": "https://regulatoryintelligence.ai/assets/logo_rih.svg",
+  "sameAs": [
+    "https://linkedin.com/company/regulatory-intelligence-hub"
+  ]
+}
+</script>
