@@ -27,3 +27,47 @@ a {
   color: #004080;
   text-decoration: none;
 }
+.client-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 2rem;
+}
+.client-logos img {
+  height: 50px;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+.client-logos img:hover {
+  filter: none;
+  opacity: 1;
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.testimonial-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+.testimonial-card:hover {
+  transform: translateY(-4px);
+}
+.testimonial-card p {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+.testimonial-card h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.2rem;
+}
+.testimonial-card span {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+}
