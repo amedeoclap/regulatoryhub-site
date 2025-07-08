@@ -459,3 +459,45 @@ p.section-intro { max-width: 700px; text-align: center; margin: 0 auto 3rem; col
     grid-template-columns: repeat(2, 1fr);
   }
 }
+/* --- STILI AGGIUNTIVI PER PAGINA SERVIZI --- */
+.card-title-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.card-title-icon::before {
+  content: attr(data-icon);
+  font-size: 1.5rem;
+}
+
+/* --- STILI AGGIUNTIVI PER PAGINA QUIZ --- */
+.quiz-section {
+    padding: 2rem 0;
+}
+.quiz-container {
+    max-width: 800px;
+    background-color: var(--white-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+.quiz-container .btn-large {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+#email-cta ul.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+    text-align: left;
+}
+#email-cta ul.benefits-list li {
+    padding-left: 2rem;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2328a745"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 1.2rem;
+    margin-bottom: 1rem;
+}
