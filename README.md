@@ -1,12 +1,13 @@
 
 # Regulatory Intelligence Hub (RIH)
 
-**Regulatory Intelligence Hub (RIH)** è una piattaforma digitale progettata per semplificare la compliance normativa nel settore MedTech. Unisce intelligenza artificiale, checklist dinamiche e strumenti modulari per aiutare fabbricanti, importatori e distributori a rispettare i requisiti MDR, IVDR, ISO 13485 e GDPR.
+**Regulatory Intelligence Hub (RIH)** è una piattaforma digitale progettata per semplificare la compliance normativa anche nel settore MedTech. Unisce intelligenza artificiale, checklist dinamiche e strumenti modulari per aiutare fabbricanti, importatori e distributori a rispettare i requisiti MDR, IVDR, ISO 13485 e GDPR.
 
 ## 🔍 Obiettivo
 
 Semplificare il processo di conformità normativa con strumenti digitali, intelligenti e accessibili, rivolti in particolare a:
 
+- PMI
 - PMI e startup MedTech
 - Distributori e importatori UE
 - Fabbricanti con dispositivi legacy da riclassificare
