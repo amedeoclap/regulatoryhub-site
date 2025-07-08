@@ -103,6 +103,16 @@ p.section-intro { max-width: 700px; text-align: center; margin: 0 auto 3rem; col
 .btn-primary { background: var(--primary-color); color: white; }
 .btn-primary:hover { background: var(--secondary-color); transform: translateY(-3px); box-shadow: var(--shadow-hover); }
 
+/* Correzione per il pulsante nella Navigazione */
+.btn-nav {
+    background: var(--primary-color);
+    color: var(--white-color) !important; /* Forza il colore del testo a bianco */
+}
+.btn-nav:hover {
+    background: var(--secondary-color);
+    color: var(--white-color) !important;
+}
+
 .btn-primary-solid { background: var(--accent-color); color: white; border-color: var(--accent-color); }
 .btn-primary-solid:hover { background: #e65a50; border-color: #e65a50; transform: translateY(-3px); box-shadow: var(--shadow-hover); }
 
@@ -187,7 +197,7 @@ p.section-intro { max-width: 700px; text-align: center; margin: 0 auto 3rem; col
 .why-us-card h3 { font-size: 1.3rem; margin: 0.5rem 0; }
 .why-us-card p { color: var(--text-light); }
 
-/* --- DASHBOARD & TESTIMONIALS (Stili originali OK) --- */
+/* --- DASHBOARD & TESTIMONIALS --- */
 .dashboard-preview { background: var(--background-light); }
 .dashboard-iframe-container {
   border: 1px solid var(--border-color);
@@ -289,6 +299,7 @@ p.section-intro { max-width: 700px; text-align: center; margin: 0 auto 3rem; col
 .highlight-box p {
   color: var(--primary-color);
 }
+.team-sidebar h3 { text-align: center; }
 .team-sidebar .member-card {
     background-color: var(--background-light);
     padding: 1.5rem;
@@ -296,19 +307,16 @@ p.section-intro { max-width: 700px; text-align: center; margin: 0 auto 3rem; col
     margin-bottom: 1.5rem;
     text-align: center;
 }
-.team-sidebar h4 {
-    margin: 0 0 0.5rem 0;
-    text-align: center;
-}
 .team-sidebar .role {
-    font-size: 0.9rem;
-    color: var(--accent-color);
-    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .main-nav { display: none; } /* Semplificazione per il tutorial, si può implementare un menu burger */
+    .main-nav { display: none; }
     h1 { font-size: 2.2rem; }
     h2 { font-size: 1.8rem; }
 }
