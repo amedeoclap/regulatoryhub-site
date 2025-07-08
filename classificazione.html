@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <title>Tool di Classificazione Dispositivi Medici (MDR) - RIH</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tool Classificazione MDR 2017/745</title>
-  <meta name="description" content="Tool interattivo per la classificazione preliminare dei dispositivi medici secondo MDR 2017/745">
-  <link rel="stylesheet" href="style-mdr.css">
+  <meta name="description" content="Tool interattivo per la classificazione preliminare dei dispositivi medici secondo il regolamento MDR (UE) 2017/745. Scopri la classe di rischio del tuo dispositivo.">
+  
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="tool-style.css"> <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h2>🩺 Tool di Classificazione MDR (UE) 2017/745</h2>
-      <p>Rispondi alle domande per stimare la classe di rischio del tuo dispositivo medico.</p>
+
+<header class="main-header">
     </header>
 
-    <div id="progress-container">
-      <div id="progress-bar"></div>
-    </div>
+<main>
+    <section class="page-header">
+        <div class="container">
+            <h1>Tool di Classificazione MDR</h1>
+            <p class="subtitle">Rispondi alle domande per ottenere una stima della classe di rischio del tuo dispositivo medico secondo il Regolamento (UE) 2017/745.</p>
+        </div>
+    </section>
+    
+    <section class="tool-section">
+        <div class="tool-container">
+            <div id="progress-container">
+                <div id="progress-bar"></div>
+            </div>
 
-    <main id="tool-container">
-      <div id="question-area"></div>
-      <div id="explanation-area" class="hidden"></div>
-    </main>
+            <div id="tool-content">
+                <div id="question-area"></div>
+                <div id="explanation-area" class="hidden"></div>
+            </div>
 
-    <footer id="navigation-area">
-      <button id="back-btn" class="secondary-btn" disabled>Indietro</button>
-      <button id="restart-btn" class="secondary-btn">Ricomincia</button>
+            <div id="result-area" class="hidden"></div>
+
+            <footer id="navigation-area">
+                <button id="back-btn" class="btn btn-secondary">Indietro</button>
+                <button id="restart-btn" class="btn btn-secondary">Ricomincia</button>
+            </footer>
+        </div>
+    </section>
+</main>
+
+<footer class="main-footer">
     </footer>
 
-    <div id="result-area" class="hidden"></div>
-  </div>
-
-  <script src="tool-mdr.js"></script>
+<script src="tool-mdr.js"></script>
 </body>
 </html>
