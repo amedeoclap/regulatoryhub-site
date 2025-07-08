@@ -114,3 +114,107 @@
 }
 
 .hidden { display: none; }
+/* Aggiungi queste regole al tuo file CSS. Puoi creare un nuovo file style-optimized.css */
+
+/* --- VARIABILI E BASE --- */
+:root {
+  --primary-color: #0050b3;
+  --secondary-color: #007bff;
+  --accent-color: #ff6f61; /* Usato più strategicamente */
+  --background-light: #f7f9fc;
+  --background-white: #ffffff;
+  --text-color: #333;
+  --text-light: #555;
+  --border-color: #e0e0e0;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.1);
+  --font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Aumentato per header */
+}
+
+/* --- HERO OTTIMIZZATO --- */
+.hero {
+  padding: 4rem 1rem;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-trust-bar {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.hero-trust-bar span {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+}
+
+/* --- BOTTONI OTTIMIZZATI --- */
+.btn-primary-solid {
+  background: var(--accent-color); /* Un colore che spicca */
+  color: white;
+  border-color: var(--accent-color);
+}
+.btn-primary-solid:hover {
+  background: #e65a50;
+  border-color: #e65a50;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* --- SEZIONE SOLUZIONI OTTIMIZZATA --- */
+.solutions-section {
+  background-color: var(--background-light);
+}
+.card .card-tag {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--background-white);
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* --- NUOVA SEZIONE: PERCHÉ SCEGLIERCI --- */
+.why-us-section {
+  padding: 4rem 1rem;
+}
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.why-us-card {
+  text-align: center;
+}
+.stat-value {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  line-height: 1;
+}
+.why-us-card h3 {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+}
+.why-us-card p {
+  color: var(--text-light);
+}
