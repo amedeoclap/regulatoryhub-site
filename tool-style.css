@@ -1,0 +1,116 @@
+/* --- STILI PER I TOOL INTERATTIVI (CLASSIFICAZIONE, QUIZ, ETC.) --- */
+:root {
+  /* Eredita le variabili da style.css */
+}
+
+.tool-section {
+  padding: 2rem 0;
+}
+
+.tool-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--white-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
+}
+
+#progress-container {
+  background-color: #e9ecef;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+#progress-bar {
+  height: 10px;
+  background-color: var(--accent-color);
+  width: 0%;
+  transition: width 0.4s ease;
+  border-radius: 50px;
+}
+
+#question-area p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+.option-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: var(--background-light);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.option-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-color: var(--primary-color);
+}
+
+.info-toggle {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#explanation-area {
+  background: var(--background-light);
+  border-left: 4px solid var(--secondary-color);
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+#result-area {
+  padding: 2rem;
+  background: var(--background-light);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+#result-area h3 {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+.disclaimer {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+#navigation-area {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+}
+#navigation-area .btn {
+  padding: 0.5rem 1.2rem;
+  border-color: var(--border-color);
+  background-color: transparent;
+  color: var(--text-color);
+}
+#navigation-area .btn:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.hidden { display: none; }
