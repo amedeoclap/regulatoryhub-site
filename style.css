@@ -372,3 +372,90 @@ p.section-intro { max-width: 700px; text-align: center; margin: 0 auto 3rem; col
   .services-grid { grid-template-columns: repeat(3, 1fr); }
   .steps-grid { grid-template-columns: repeat(4, 1fr); }
 }
+/* --- STILI AGGIUNTIVI PER PAGINA 'CHI SIAMO' --- */
+
+.content-section .container.content-container {
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.highlight-box {
+  background-color: var(--background-light);
+  border-left: 4px solid var(--primary-color);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-radius: 4px;
+}
+.highlight-box p {
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.content-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+.content-section ul li {
+  padding-left: 2rem;
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2328a745"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.stats-sidebar h3 {
+  text-align: left;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.stat-card {
+  background-color: var(--background-light);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.stat-card .value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.stat-card .label {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.sectors-section {
+  background-color: var(--background-light);
+}
+.sectors-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.sector-card {
+  background: var(--white-color);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--secondary-color);
+}
+.sector-card h4 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+@media (min-width: 992px) {
+  .content-section .container.content-container {
+    grid-template-columns: 2fr 1fr;
+  }
+  .sectors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
