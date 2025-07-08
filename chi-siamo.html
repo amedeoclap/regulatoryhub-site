@@ -1,238 +1,144 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chi Siamo - Regulatory Intelligence Hub</title>
+  
+  <title>Chi Siamo | La Visione di Regulatory Intelligence Hub</title>
+  <meta name="description" content="Scopri la nostra missione: unire l'expertise normativa e l'intelligenza artificiale per rendere la compliance un vantaggio competitivo per le PMI. Membri AIFOD ONU e specialisti PRRC.">
+  <link rel="canonical" href="https://regulatoryintelligence.ai/chi-siamo.html">
+  
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <style>
-    /* --- Stili condivisi con index.html --- */
-    :root {
-      --primary-color: #0050b3;
-      --secondary-color: #007bff;
-      --background-light: #f7f9fc;
-      --text-color: #333;
-      --text-light: #555;
-      --white-color: #ffffff;
-      --border-color: #e0e0e0;
-      --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      --shadow-hover: 0 6px 16px rgba(0, 0, 0, 0.12);
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      margin: 0;
-      line-height: 1.7;
-      color: var(--text-color);
-      background-color: var(--white-color);
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-    h1, h2, h3 { 
-      color: var(--primary-color); 
-      font-weight: 700;
-    }
-    h2 { font-size: 2.2rem; margin-top: 3rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; }
-    h3 { font-size: 1.5rem; margin-top: 2rem; color: #333; }
-    p, ul { color: var(--text-light); }
-    ul { list-style-type: '✅ '; padding-left: 1.5rem; }
-    li { margin-bottom: 0.5rem; }
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
-    /* --- Header e Footer (identici a index) --- */
-    .main-header {
-      background-color: var(--white-color);
-      padding: 1rem 0;
-      border-bottom: 1px solid var(--border-color);
-    }
-    .main-header .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      font-weight: 600;
-      font-size: 1.2rem;
-      text-decoration: none;
-      color: var(--primary-color);
-    }
-    .logo img {
-      height: 40px;
-      margin-right: 0.75rem;
-    }
-    .main-nav a {
-      margin: 0 1rem;
-      color: var(--text-light);
-      text-decoration: none;
-      font-weight: 500;
-    }
-     .btn {
-      display: inline-block;
-      background: var(--secondary-color);
-      color: white;
-      padding: 0.8rem 1.8rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .btn:hover {
-        transform: translateY(-3px);
-        box-shadow: var(--shadow-hover);
-    }
-    footer {
-      background: #333;
-      color: #ccc;
-      text-align: center;
-      padding: 2.5rem 0;
-      margin-top: 4rem;
-      font-size: 0.9rem;
-    }
-    footer a { color: white; margin: 0 0.5rem; text-decoration: none; }
-
-    /* --- Stili specifici per la pagina --- */
-    .page-header {
-        background-color: var(--background-light);
-        padding: 3rem 0;
-        text-align: center;
-        border-bottom: 1px solid var(--border-color);
-    }
-    .page-header h1 {
-        font-size: 2.8rem;
-        margin: 0;
-    }
-    .content-section {
-        padding: 3rem 0;
-    }
-    .highlight-box {
-        background-color: var(--background-light);
-        border-left: 4px solid var(--primary-color);
-        padding: 1.5rem;
-        margin: 2rem 0;
-        border-radius: 4px;
-    }
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .stat {
-      background-color: var(--white-color);
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: var(--shadow);
-    }
-    .stat .value {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--primary-color);
-    }
-    .stat .label {
-      font-size: 0.9rem;
-      color: var(--text-light);
-    }
-
-    @media (max-width: 820px) {
-        .main-header .container {
-            flex-direction: column;
-            gap: 1rem;
-        }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header class="main-header">
-  <div class="container" style="max-width: 1100px;">
-    <a href="index.html" class="logo">
-        <img src="logo.svg" alt="Logo Regulatory Intelligence Hub">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="Regulatory Intelligence Hub - Homepage">
+        <img src="assets/loghi/logo_rih.svg" alt="Logo Regulatory Intelligence Hub">
         <span>Regulatory Intelligence Hub</span>
     </a>
     <nav class="main-nav">
-      <a href="index.html#chi-siamo">Chi Siamo</a>
+      <a href="index.html#come-funziona">Come Funziona</a>
       <a href="index.html#servizi">Servizi</a>
-      <a href="index.html#perche-investire">Perché Noi</a>
-      <a href="contact.html">Contattaci</a>
+      <a href="index.html#dashboard">Dashboard</a>
+      <a href="index.html#clienti">Clienti</a>
+      <a href="contatti.html" class="btn btn-nav">Contattaci</a>
     </nav>
   </div>
 </header>
 
 <main>
-    <div class="page-header">
-        <h1>La nostra storia e la nostra visione</h1>
-    </div>
-
-    <div class="container content-section">
-
-        <h2>La nostra Mission</h2>
-        <p>Nasciamo dall'incontro tra due mondi: <strong>la precisione normativa europea</strong> e <strong>l'intelligenza artificiale democratica</strong>. La nostra mission? Trasformare la compliance da ostacolo burocratico a <strong>vantaggio competitivo tangibile</strong> per le PMI italiane.</p>
-        <p>Dopo anni spesi a vedere <strong>piccole e medie imprese brillanti</strong> bloccarsi davanti alla complessità normativa, abbiamo deciso di agire. Troppo spesso, aziende innovative con prodotti straordinari perdevano mesi e budget navigando tra MDR, GDPR, ISO 9001 e certificazioni varie.</p>
-        <div class="highlight-box">
-            <p style="margin: 0;">Il momento di svolta è stato quando abbiamo realizzato che <strong>l'intelligenza artificiale poteva democratizzare l'accesso all'expertise regulatory</strong> che prima costava migliaia di euro al giorno.</p>
+    <section class="page-header">
+        <div class="container">
+            <h1>La Nostra Visione: Compliance come Asset</h1>
+            <p class="subtitle">Nati per trasformare la complessità normativa in un vantaggio competitivo tangibile per le PMI italiane.</p>
         </div>
+    </section>
 
-        <h2>Chi siamo davvero</h2>
-        <p>Non siamo una consulenza tradizionale. Siamo <strong>"regulatory engineers"</strong> che utilizzano la tecnologia per scalare l'expertise umana, rendendo accessibile a budget PMI quello che prima era riservato alle multinazionali.</p>
-        <ul>
-            <li><strong>Membri del comitato AIFOD delle Nazioni Unite</strong>, dove contribuiamo a definire gli standard globali per un'AI etica.</li>
-            <li><strong>Personale Qualificato (PRRC)</strong> secondo l'Art. 15 del regolamento MDR.</li>
-            <li><strong>Esperti di Sistemi Qualità ISO 9001</strong> e risk management.</li>
-            <li><strong>Specialisti certificati GDPR</strong> con focus sulla privacy-by-design.</li>
-        </ul>
-        
-        <h2>Cosa ci rende diversi</h2>
-        <p>Il nostro approccio è AI-Powered ma Human-Supervised. Gli algoritmi analizzano la documentazione e identificano le lacune in minuti, ma ogni raccomandazione è validata da esperti qualificati. Uniamo la <strong>velocità dell'AI all'affidabilità umana</strong>.</p>
-        
-        <div class="stats-grid">
-            <div class="stat">
-                <div class="value">80%</div>
-                <div class="label">Riduzione Time-to-Compliance</div>
-            </div>
-            <div class="stat">
-                <div class="value">60%</div>
-                <div class="label">Risparmio Costi Advisory</div>
-            </div>
-            <div class="stat">
-                <div class="value">95%</div>
-                <div class="label">Success Rate Audit</div>
-            </div>
-             <div class="stat">
-                <div class="value">100%</div>
-                <div class="label">Clienti Certificati</div>
+    <section class="content-section">
+        <div class="container content-container">
+            
+            <article>
+                <h2>La Mission di RIH</h2>
+                <p>Dopo anni spesi a vedere <strong>piccole e medie imprese brillanti</strong> bloccarsi davanti alla complessità di MDR, GDPR e ISO, abbiamo deciso di agire. La nostra missione è democratizzare l'accesso all'expertise regolatoria, unendo la precisione normativa europea all'intelligenza artificiale.</p>
+                <div class="highlight-box">
+                    <p>Il momento di svolta è stato capire che l'AI poteva rendere accessibile a budget da PMI quello che prima era un lusso per multinazionali: una consulenza di altissimo livello, veloce ed efficiente.</p>
+                </div>
+
+                <h2>Chi Siamo Davvero: i "Regulatory Engineers"</h2>
+                <p>Non siamo una società di consulenza tradizionale. Siamo un team di "ingegneri della regolamentazione" che usano la tecnologia per scalare l'esperienza umana. Ecco le nostre competenze chiave:</p>
+                <ul>
+                    <li>Membri del comitato <strong>AIFOD delle Nazioni Unite</strong>, dove contribuiamo a definire gli standard per un'AI etica e affidabile.</li>
+                    <li><strong>Personale Qualificato (PRRC)</strong> certificato secondo l'Art. 15 del Regolamento MDR 2017/745.</li>
+                    <li>Esperti di Sistemi Qualità <strong>ISO 9001</strong> e <strong>ISO 13485</strong>, con focus sul risk management.</li>
+                    <li>Specialisti certificati <strong>GDPR e Data Protection</strong>, focalizzati sulla privacy-by-design.</li>
+                </ul>
+            </article>
+
+            <aside class="stats-sidebar">
+                <h3>Le Nostre Performance</h3>
+                <div class="stat-card">
+                    <div class="value">80%</div>
+                    <div class="label">Riduzione del Time-to-Compliance</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">60%</div>
+                    <div class="label">Risparmio sui Costi di Consulenza</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">95%</div>
+                    <div class="label">Success Rate Audit di Certificazione</div>
+                </div>
+                 <div class="stat-card">
+                    <div class="value">100%</div>
+                    <div class="label">Clienti Certificati al Primo Tentativo</div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section class="sectors-section">
+        <div class="container">
+            <h2>I Nostri Settori di Intervento</h2>
+            <p class="section-intro">Applichiamo il nostro metodo AI-Powered ma Human-Supervised per preparare le aziende alle sfide dei mercati globali.</p>
+            <div class="sectors-grid">
+                <div class="sector-card">
+                    <h4>MedTech & Life Sciences</h4>
+                    <p>Dispositivi medici (MDR/IVDR), SaMD, software as a medical device, e strategie per startup biotech.</p>
+                </div>
+                <div class="sector-card">
+                    <h4>Manifatturiero & Industria</h4>
+                    <p>Certificazioni ISO 9001, Direttiva Macchine, gestione dei processi CAPA e ottimizzazione della qualità.</p>
+                </div>
+                <div class="sector-card">
+                    <h4>Tech & Digital</h4>
+                    <p>Compliance GDPR per piattaforme SaaS, analisi DPIA, gestione dei consensi e privacy by design.</p>
+                </div>
+                 <div class="sector-card">
+                    <h4>Startup & Scale-up</h4>
+                    <p>Definizione della regulatory roadmap dalla MVP al mercato, e supporto alla due diligence per round di investimento.</p>
+                </div>
             </div>
         </div>
-
-        <h2>I nostri Settori</h2>
-        <p>Applichiamo il nostro metodo in diversi ambiti, sempre con l'obiettivo di preparare le aziende alle sfide del mercato globale.</p>
-        <ul>
-            <li><strong>MedTech & Life Sciences:</strong> Dispositivi medici (MDR/IVDR), SaMD, strategie per startup biotech.</li>
-            <li><strong>Manifatturiero & Industria:</strong> Certificazioni ISO 9001, direttiva macchine, gestione CAPA.</li>
-            <li><strong>Tech & Digital:</strong> Compliance GDPR per SaaS, DPIA, gestione consensi.</li>
-            <li><strong>Startup & Scale-up:</strong> Regulatory roadmap dalla MVP al mercato, due diligence per investitori.</li>
-        </ul>
-
-         <div class="highlight-box" style="text-align: center; padding: 2.5rem;">
-            <h3>La nostra promessa: "Compliance senza compromessi"</h3>
-            <p>Crediamo che ogni PMI italiana debba poter accedere alla stessa qualità di consulenza regulatory delle grandi corporation, senza dover scegliere tra eccellenza e sostenibilità economica. Non vendiamo consulenza: <strong>trasferiamo autonomia.</strong></p>
-            <a href="contact.html" class="btn" style="margin-top: 1rem;">Contattaci per un assessment gratuito</a>
+    </section>
+    
+    <section id="cta" class="cta-section">
+      <div class="container">
+        <div class="cta-block">
+          <div>
+            <h3>La Nostra Promessa: Compliance Senza Compromessi</h3>
+            <p>Non vendiamo consulenza, trasferiamo autonomia. Crediamo che ogni PMI italiana meriti l'accesso a un supporto regolatorio d'eccellenza.</p>
+          </div>
+          <a href="contatti.html" class="btn btn-primary btn-large">Richiedi un Assessment Gratuito</a>
         </div>
-    </div>
+      </div>
+    </section>
 </main>
 
-<footer>
-  <div class="container">
-      <p>
+<footer class="main-footer">
+    <div class="container">
+      <p><strong>Regulatory Intelligence Hub</strong> – Compliance as a Service</p>
+      <p>Powered by <strong>AE Consulting</strong></p>
+      <div class="footer-links">
         <a href="privacy.html">Privacy Policy</a> |
         <a href="cookie.html">Cookie Policy</a> |
-        <a href="whitepaper_rih.pdf">Whitepaper</a>
-      </p>
-      <p>&copy; 2025 Regulatory Intelligence Hub – P. IVA: [in registrazione]</p>
-  </div>
+        <a href="contatti.html">Contatti</a>
+      </div>
+      <div class="social-links">
+        <a href="https://linkedin.com/company/aeconsulting" target="_blank" rel="noopener noreferrer" aria-label="Seguici su LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+      </div>
+      <p class="copyright">&copy; 2025 Regulatory Intelligence Hub. Tutti i diritti riservati.</p>
+    </div>
 </footer>
 
 </body>
