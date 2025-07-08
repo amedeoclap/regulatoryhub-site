@@ -115,7 +115,106 @@ p.section-intro { max-width: 700px; text-align: center; margin: 0 auto 3rem; col
 }
 .hero h1, .hero .subtitle { color: white; }
 .hero .btn-primary { margin-right: 1rem; }
+/* Aggiungi questa regola per centrare i pulsanti nella sezione Hero */
+.hero-buttons {
+  text-align: center;
+  margin-top: 2rem;
+}
 
+/* Modifica questa regola per assicurare il contrasto del testo */
+.btn-nav {
+  background: var(--primary-color);
+  color: var(--white-color) !important; /* Forza il colore bianco */
+}
+.btn-nav:hover {
+  background: var(--secondary-color);
+  color: var(--white-color) !important;
+}
+
+/* Aggiungi queste nuove regole per la pagina e il modulo di contatto */
+/* --- CONTACT PAGE & FORM --- */
+.page-header {
+  background-color: var(--background-light);
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.page-header .subtitle {
+  color: var(--text-color);
+}
+
+.contact-section .container {
+  max-width: 900px; /* Layout più stretto per il form */
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  padding: 3rem 0;
+}
+
+.contact-form-container h2, .contact-info-container h2 {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.contact-info-container .contact-info-box {
+  background-color: var(--background-light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+.contact-info-container h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+.contact-info-container p {
+  margin-bottom: 0;
+}
+.contact-info-container a {
+  color: var(--secondary-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+.contact-info-container a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive per la pagina contatti */
+@media (min-width: 768px) {
+  .contact-grid {
+    /* La griglia avrà 2/3 per il form e 1/3 per le info */
+    grid-template-columns: 2fr 1fr;
+  }
+}
 /* --- HOW IT WORKS --- */
 .how-it-works { background-color: var(--background-light); }
 .steps-grid {
